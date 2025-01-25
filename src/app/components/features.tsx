@@ -62,7 +62,7 @@ export const FeatureParagraph: React.FC<FeatureParagraphProps> = ({ header, seco
 const Features = () => {
   return (
     <div className="my-[15%]">
-      <div>
+      <div id="features">
         {features.map((feature, index) => (
           <FeatureParagraph
             key={index}
@@ -75,7 +75,7 @@ const Features = () => {
         ))}
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center mt-10 space-y-5 md:space-y-0 md:space-x-10">
+      <div id="howitworks" className="flex flex-col md:flex-row items-center justify-center mt-10 space-y-5 md:space-y-0 md:space-x-10">
         <div className="flex flex-col items-start max-w-md space-y-3 text-center md:text-left">
           <h2 className="text-2xl font-bold">Discover How It Works</h2>
           <p className="text-base text-gray-600">

@@ -45,9 +45,9 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col md:flex-row w-[80%] mx-auto items-center justify-center mt-[10vh] p-8 rounded-lg">
+        <div id="contact" className="flex flex-col md:flex-row w-[80%] mx-auto items-center justify-center mt-[10vh] p-8 rounded-lg">
             <div className="w-full md:w-1/2 md:mr-[20%]">
-                <h2 className="text-3xl font-bold mb-4 text-blue-700">Contact Us</h2>
+                <h2 className="text-3xl font-bold mb-4 text-blue-400">Contact Us</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                         <label htmlFor="username" className="block text-sm font-medium text-gray-700">Username</label>
@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
                         />
                     </div>
 
-                    <button type="submit" className="w-full bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 shadow-md transition duration-200">Send</button>
+                    <button type="submit" className="w-full bg-blue-400 text-white p-3 rounded-md hover:bg-blue-500 shadow-md transition duration-200">Send</button>
                     {statusMessage && <p className="mt-2 text-green-600">{statusMessage}</p>}
                 </form>
             </div>

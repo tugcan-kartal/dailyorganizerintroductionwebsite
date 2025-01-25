@@ -3,10 +3,10 @@ import { MdDownload } from "react-icons/md";
 
 const Download = () => {
   return (
-    <div className="mx-auto my-[10%] rounded-2xl">
+    <div id="download" className="mx-auto my-[10%] rounded-2xl">
       <div className="flex flex-col justify-center items-center text-center">
         <h1 className="text-4xl font-bold text-gray-800 leading-snug">
-          Kolay ve pratik AI entegreli uygulama ile en zor işleri hallet
+          Kolay ve pratik AI entegreli uygulama ile en zor işleri ücretsiz hallet
         </h1>
         <p className="text-lg text-gray-500 mt-4">
           Mobil ve PC sürümü mevcut, hemen deneyin!

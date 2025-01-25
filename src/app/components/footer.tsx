@@ -21,23 +21,22 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-center items-center gap-x-[25%]">
-          <div className="text-3xl text-gray-600 hover:text-blue-500">
+          <div className="text-3xl text-gray-600 hover:text-blue-500 cursor-pointer">
             <IoLogoGooglePlaystore />
           </div>
 
-          <div className="text-3xl text-gray-600 hover:text-blue-500">
+          <div className="text-3xl text-gray-600 hover:text-blue-500 cursor-pointer">
             <FaInstagram />
           </div>
 
-          <div className="text-3xl text-gray-600 hover:text-blue-500">
+          <div className="text-3xl text-gray-600 hover:text-blue-500 cursor-pointer">
             <FaYoutube />
           </div>
         </div>
+      </div>
 
-        <div className="flex justify-center items-center gap-x-5">
-          <div>Hakkımızda</div>
-          <div>İletişim</div>
-        </div>
+      <div className="text-center py-4 text-sm text-gray-500">
+        © {new Date().getFullYear()} Taskly Adviser AI. Tüm hakları saklıdır.
       </div>
     </div>
   );
