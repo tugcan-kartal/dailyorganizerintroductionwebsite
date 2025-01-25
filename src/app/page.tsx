@@ -3,6 +3,7 @@ import HeroSection from "./components/heroSection";
 import Features from "./components/features";
 import Download from "./components/download";
 import Footer from "./components/footer";
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <Features />
+      <Contact />
       <Download />
       <Footer />
     </div>

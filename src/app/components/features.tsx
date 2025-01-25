@@ -15,27 +15,27 @@ interface FeatureParagraphProps {
 
 const features=[
     {
-        header: "Taskini ekle", 
-        seconder: "Yapman gerekenleri koyabilirsin", 
-        thirder: "Taskinin detaylarini dikkatlice belirt yapay zeka tarafindan tarancak daha sonra", 
+        header: "Taskini Ekle", 
+        seconder: "Görev Detaylarını Dikkatlice Belirt", 
+        thirder: "Her görev için detaylı bilgi ekle. Yapay zeka, girdiğin bilgileri analiz ederek sana en iyi şekilde yardımcı olacak.", 
         fourthImg: TaskAddPage
     },
     {
         header: "Taskini düzenleme", 
-        seconder: "Taskini sonradan düzenleme", 
-        thirder: "Taskini düzenleyebilirsin sonradan edit yaparak silmene gerek kalmadan siralayabilirsin ve yapildi olarak işaretleme", 
+        seconder: "Görevi Yeniden Düzenle veya Sırala", 
+        thirder: "Silmek zorunda kalmadan görevlerini düzenleyebilir, sıralayabilir ve gerektiğinde `Tamamlandı` olarak işaretleyebilirsin.", 
         fourthImg: TaskEditPart
     },
     {
         header: "Tasklarini filtreleme ve siralama", 
-        seconder: "Tasklarini önceliğine göre sirala", 
-        thirder: "Tasklarini kategorilerine önemlilik derecelerine tarihlerine ve bitip bitmemelerine göre ayarlayabilirsin", 
+        seconder: "Görevlerini önceliklerine göre kolayca organize et.", 
+        thirder: "Görevlerini kategorilerine, önem derecelerine, tarihlerine veya tamamlanma durumlarına göre filtreleyip düzenleyebilirsin.", 
         fourthImg: TaskFilterPart
     },
     {
-        header: "Taskini ai ile daniş", 
-        seconder: "Tasklarini ail ile sorgulatabilme", 
-        thirder: "Taskini yapay zeka ile ilk olarak tavsiye isteyebilirsin veya taskinla alakali sorularini sorabilirsin sen eklediğinde zaten otomatik tariyor", 
+        header: "Taskini Yapay Zeka ile Danış", 
+        seconder: "Görevlerin hakkında öneriler al ve sorularını kolayca sor.", 
+        thirder: "Eklediğin görevler yapay zeka tarafından otomatik olarak taranır ve sana en uygun tavsiyeler sunulur. Görevlerinle ilgili sorularını her zaman danışabilirsin.", 
         fourthImg: GbtPage
     }
 ]
@@ -44,9 +44,9 @@ export const FeatureParagraph: React.FC<FeatureParagraphProps> = ({ header, seco
   return (
     <div className={`flex justify-center items-center gap-x-[15%] my-[10%] ${reverse ? "flex-row-reverse" : "flex-row"}`}>
         <div className="flex flex-col gap-y-[1vh] text-start my-[5%] w-[30%]">
-        <div className="text-blue-400">{header}</div>
-        <div className="text-gray-800 text-2xl">{seconder}</div>
-        <div className="text-xl text-gray-400">
+        <div className="text-blue-400 font-semibold">{header}</div>
+        <div className="text-gray-800 text-2xl font-semibold">{seconder}</div>
+        <div className="text-xl text-gray-400 font-li">
             {thirder}
         </div>
         </div>
@@ -63,24 +63,34 @@ const Features = () => {
   return (
     <div className="my-[15%]">
       <div>
-        {features.map((feature,index)=>(
-            <FeatureParagraph key={index} header={feature.header} seconder={feature.seconder} thirder={feature.thirder} fourthImg={feature.fourthImg} reverse={index % 2 !== 0}/>
+        {features.map((feature, index) => (
+          <FeatureParagraph
+            key={index}
+            header={feature.header}
+            seconder={feature.seconder}
+            thirder={feature.thirder}
+            fourthImg={feature.fourthImg}
+            reverse={index % 2 !== 0}
+          />
         ))}
       </div>
 
-        <div className="flex flex-col items-center justify-center mt-10">
-            <div className="text-xl pr-[55%] py-5">
-                To see how works...
-            </div>
-          <iframe
-            className="w-[70%] h-[70vh]"
-            src="https://www.youtube.com/embed/fI-iTYAwL6c"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+      <div className="flex flex-col md:flex-row items-center justify-center mt-10 space-y-5 md:space-y-0 md:space-x-10">
+        <div className="flex flex-col items-start max-w-md space-y-3 text-center md:text-left">
+          <h2 className="text-2xl font-bold">Discover How It Works</h2>
+          <p className="text-base text-gray-600">
+            Watch the video to see how Taskly Adviser AI simplifies your task
+            management and makes your daily workflow smarter.
+          </p>
         </div>
+        <iframe
+          className="w-full md:w-[60%] h-[50vh] rounded-lg shadow-lg"
+          src="https://www.youtube.com/embed/fI-iTYAwL6c"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
     </div>
   );
 };

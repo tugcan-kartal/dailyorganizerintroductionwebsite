@@ -21,15 +21,15 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-center items-center gap-x-[25%]">
-          <div className="text-3xl">
+          <div className="text-3xl text-gray-600 hover:text-blue-500">
             <IoLogoGooglePlaystore />
           </div>
 
-          <div className="text-3xl">
+          <div className="text-3xl text-gray-600 hover:text-blue-500">
             <FaInstagram />
           </div>
 
-          <div className="text-3xl">
+          <div className="text-3xl text-gray-600 hover:text-blue-500">
             <FaYoutube />
           </div>
         </div>
