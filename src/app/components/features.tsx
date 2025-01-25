@@ -40,24 +40,44 @@ const features=[
     }
 ]
 
-export const FeatureParagraph: React.FC<FeatureParagraphProps> = ({ header, seconder, thirder, fourthImg,reverse }) => {
+export const FeatureParagraph: React.FC<FeatureParagraphProps> = ({
+  header,
+  seconder,
+  thirder,
+  fourthImg,
+  reverse,
+}) => {
   return (
-    <div className={`flex justify-center items-center gap-x-[15%] my-[10%] ${reverse ? "flex-row-reverse" : "flex-row"}`}>
-        <div className="flex flex-col gap-y-[1vh] text-start my-[5%] w-[30%]">
-        <div className="text-blue-400 font-semibold">{header}</div>
-        <div className="text-gray-800 text-2xl font-semibold">{seconder}</div>
-        <div className="text-xl text-gray-400 font-li">
-            {thirder}
+    <div
+      className={`flex flex-col md:flex-row ${
+        reverse ? "md:flex-row-reverse" : ""
+      } justify-center items-center gap-y-8 md:gap-x-[15%] my-[10%]`}
+    >
+      {/* Text Section */}
+      <div className="flex flex-col gap-y-4 text-center md:text-start my-[5%] w-full md:w-[40%]">
+        <div className="text-blue-400 font-semibold text-lg md:text-xl">
+          {header}
         </div>
+        <div className="text-gray-800 text-2xl md:text-3xl font-semibold">
+          {seconder}
         </div>
+        <div className="text-lg md:text-xl text-gray-400 leading-relaxed">
+          {thirder}
+        </div>
+      </div>
 
-        <div className="w-[60%]">
-            <Image src={fourthImg} alt="not found"/>
-        </div>
+      {/* Image Section */}
+      <div className="w-full md:w-[50%]">
+        <Image
+          src={fourthImg}
+          alt="not found"
+          className="rounded-lg shadow-lg"
+        />
+      </div>
     </div>
-
   );
 };
+
 
 const Features = () => {
   return (
