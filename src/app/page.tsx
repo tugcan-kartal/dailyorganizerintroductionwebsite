@@ -1,7 +1,8 @@
-import Image from "next/image";
 import Navbar from "./components/navbar";
 import HeroSection from "./components/heroSection";
 import Features from "./components/features";
+import Download from "./components/download";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -9,6 +10,8 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <Features />
+      <Download />
+      <Footer />
     </div>
   );
 }

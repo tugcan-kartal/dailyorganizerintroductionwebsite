@@ -61,12 +61,26 @@ export const FeatureParagraph: React.FC<FeatureParagraphProps> = ({ header, seco
 
 const Features = () => {
   return (
-    <div className="mt-[20vh]">
+    <div className="my-[15%]">
       <div>
         {features.map((feature,index)=>(
             <FeatureParagraph key={index} header={feature.header} seconder={feature.seconder} thirder={feature.thirder} fourthImg={feature.fourthImg} reverse={index % 2 !== 0}/>
         ))}
       </div>
+
+        <div className="flex flex-col items-center justify-center mt-10">
+            <div className="text-xl pr-[55%] py-5">
+                To see how works...
+            </div>
+          <iframe
+            className="w-[70%] h-[70vh]"
+            src="https://www.youtube.com/embed/fI-iTYAwL6c"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
     </div>
   );
 };
