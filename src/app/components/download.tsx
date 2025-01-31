@@ -17,7 +17,7 @@ const Download = () => {
           </button>
           <div className="flex items-center gap-x-3 mt-4 text-gray-500 hover:text-gray-700 cursor-pointer transition duration-300">
             <MdDownload size={24} />
-            <span className="text-sm font-medium">Play Store'dan İndir</span>
+            <span className="text-sm font-medium">Download With PlayStore</span>
           </div>
         </div>
       </div>
