@@ -4,10 +4,12 @@ import LogoTransparent from "@/../public/logo-transparent.png"
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <div>
+      
       <div className="flex justify-between border-t-2 border-gray-200">
         <div className="flex justify-center items-center">
           <div>
@@ -33,6 +35,10 @@ const Footer = () => {
             <FaYoutube />
           </div>
         </div>
+      </div>
+
+      <div className="flex justify-center">
+        <Link href={"footer/privacy-policy"}>Privacy and Policy</Link>
       </div>
 
       <div className="text-center py-4 text-sm text-gray-500">
